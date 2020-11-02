@@ -1,0 +1,15 @@
+1. Use of modular monolithic and event driven architecture
+Status:
+Proposed
+
+Context:
+Farmacy food system has a limitted budget and already has the existing system/devices which are generating the sales/inventory data. Sales and inventory data should updated back to central kitchen and farmacy food system 
+from multiple locations and devices. Users should be able to browse the current meals and availiablity of those for all locations.
+
+Decision:
+Architects decided to use Event driven architecture to connect/stream the sales/inventory data from different devices. This would allow the data to be processed asynchornously and also seamlessly scale based on the load. 
+Decided to use modular monolithic architecture for the core Farmacy food system given the limitted budget constraints and also architecture characteritics (all the modules/components with in the core system has the same architecture
+characteritics). But system has been broken down by domain with low coupling between different modules which would also allow the architects to migrate towards distributed architecture seamlessly in future as time/cost permits.
+
+Consequences:
+As this is monolithic application, entire application has to be deployed for any change.
