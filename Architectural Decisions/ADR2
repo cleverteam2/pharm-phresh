@@ -1,0 +1,12 @@
+2. Promotion/Coupon - Component vs Service
+Status:
+Proposed
+
+Context:
+Farmacy food system should accept promotional pricing and Coupons
+
+Decision:
+As the requirement is not clearly states promotions/coupons are location based or global, we have decided to go with Component in a modular monolithic system instead of domain based micro services or micro kernal architecture.
+
+Consequences:
+Extending promotion/coupon engine would take a lot of development/testing effort.
