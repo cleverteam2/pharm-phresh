@@ -1,0 +1,14 @@
+4. Separate inventory/sales tracker services for POS and Smart fridges 
+Status:
+Proposed
+
+Context:
+Inventory data should be updated to both Central Kitchen and Farmacy food system from multiple locations (Kiosks and Smart fridges) 
+
+Decision:
+We have decided to use seperate the inventory/sales tracker services out from farmacy food system and use event driven architecture to update the farmacy food system. This services would be stateful services to track what data has already 
+been posted. 
+
+Consequences:
+This would allow the tracker services scale independently from farmacy food system. 
+Needs separate database and it's recovery/error handling logic.
